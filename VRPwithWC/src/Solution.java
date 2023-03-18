@@ -79,8 +79,11 @@ public class Solution{
     }
     
     private void Split(InputData data,double bound){
-        this.AuxiliaryGraph=new AuxiliaryGraph(data,this.GiantTour,bound);
-        this.AuxiliaryGraph.setArcs();
+        if(bound<Double.POSITIVE_INFINITY)
+            this.getNewGiantTour();
+        this.AuxiliaryGraph=this.getGraph(data,bound);
+        if(this.getFitness()<bound)
+            this.Split(data,this.getFitness());
     }
     
     private AuxiliaryGraph getGraph(InputData data,double bound){
