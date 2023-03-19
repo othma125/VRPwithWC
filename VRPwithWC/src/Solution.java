@@ -92,9 +92,9 @@ public class Solution{
         return graph;
     }
     
-    private void setGraph(AuxiliaryGraph graph){
-        this.AuxiliaryGraph=graph;
-    }
+//    private void setGraph(AuxiliaryGraph graph){
+//        this.AuxiliaryGraph=graph;
+//    }
     
     void LocalSearch(InputData data){
         this.LocalSearch(data,0,1);
@@ -104,7 +104,7 @@ public class Solution{
         new Motion(i,j).Swap(this.GiantTour);
         AuxiliaryGraph graph=this.getGraph(data,this.getFitness());
         if(graph.getLabel()<this.getFitness()){
-            this.setGraph(graph);
+            this.AuxiliaryGraph=graph;
             if(j+1<this.GiantTour.length)
                 this.LocalSearch(data,i,j+1);
             else if(i+2<this.GiantTour.length)
