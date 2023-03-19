@@ -98,6 +98,7 @@ public class Solution{
     
     void LocalSearch(InputData data){
         this.LocalSearch(data,0,1);
+        this.Split(data,this.getFitness());
     }
     
     void LocalSearch(InputData data,int i,int j){
@@ -109,8 +110,6 @@ public class Solution{
                 this.LocalSearch(data,i,j+1);
             else if(i+2<this.GiantTour.length)
                 this.LocalSearch(data,i+1,i+2);
-            else
-                this.Split(data,this.getFitness());
         }
         else
             new Motion(i,j).Swap(this.GiantTour);
