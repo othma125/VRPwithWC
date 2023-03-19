@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 /**
  *
- * @author hanan
+ * @author Othmane
  */
 public class InputData {
     int CustomersCount;

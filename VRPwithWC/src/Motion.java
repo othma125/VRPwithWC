@@ -3,6 +3,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
+/**
+ *
+ * @author Othmane
+ */
 public class Motion {
     private final int Index1,Index2;
     

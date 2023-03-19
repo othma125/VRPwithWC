@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author hanan
+ * @author Othmane
  */
 public abstract class MetaHeuristic{
     InputData Data;

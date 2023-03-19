@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  *
- * @author hanan
+ * @author Othmane
  */
 public class AuxiliaryGraphNode{
     public final int NodeIndex;

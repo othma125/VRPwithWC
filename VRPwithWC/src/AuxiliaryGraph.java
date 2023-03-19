@@ -13,7 +13,7 @@ import java.util.stream.IntStream;
 
 /**
  *
- * @author hanan
+ * @author Othmane
  */
 public class AuxiliaryGraph{
     private int ThreadsCounter;
