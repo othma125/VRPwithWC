@@ -20,7 +20,6 @@ public class main {
     public static void main(String[] args) 
                                     //    throws IloException
                                                             {
-        // TODO code application logic here
         InputData data=new InputData(new File("Instances\\Solomon\\c101.txt"),50/*stops count*/);
         System.out.println(data);
         

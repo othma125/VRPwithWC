@@ -45,27 +45,22 @@ public class AuxiliaryGraph{
             if(this.Nodes[i].NodeProcessingWith<node.NodeIndex)
                 return;
         boolean c;
-//        node.Lock.lock();
-//        try{
-            c=this.ThreadsCounter==node.NodeIndex;
-            if(c){
-                this.ThreadsCounter++;
-                if(node.isFeasible() && node.Label<this.BoundingCost){
-                    Thread t=new Thread(()->this.run(node));
-                    Threads.add(t);
-                    node.Lock.lock();
-                    try {
-                        t.start();
-                    } finally {
-                        node.Lock.unlock();
-                    }
+        c=this.ThreadsCounter==node.NodeIndex;
+        if(c){
+            this.ThreadsCounter++;
+            if(node.isFeasible() && node.Label<this.BoundingCost){
+                Thread t=new Thread(()->this.run(node));
+                Threads.add(t);
+                node.Lock.lock();
+                try {
+                    t.start();
+                } finally {
+                    node.Lock.unlock();
                 }
-                else
-                    node.NodeProcessingWith=this.Length;
             }
-//        }finally{
-//            node.Lock.unlock();
-//        }
+            else
+                node.NodeProcessingWith=this.Length;
+        }
         if(c && node.NodeIndex+1<this.Length)
             this.setNewThread(this.Nodes[node.NodeIndex+1],Threads);
     }
