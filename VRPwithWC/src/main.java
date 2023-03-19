@@ -10,7 +10,7 @@ import java.io.File;
 
 /**
  *
- * @author hanan
+ * @author Othmane
  */
 public class main {
 
