@@ -5,7 +5,9 @@
         <group>
             <file>file:/D:/Programmation/java/VRPwithWC/VRPwithWC/src/main.java</file>
             <file>file:/D:/Programmation/java/VRPwithWC/VRPwithWC/src/CplexModel.java</file>
+            <file>file:/D:/Programmation/java/VRPwithWC/VRPwithWC/src/AuxiliaryGraph.java</file>
             <file>file:/D:/Programmation/java/VRPwithWC/VRPwithWC/src/Solution.java</file>
+            <file>file:/D:/Programmation/java/VRPwithWC/VRPwithWC/src/AuxiliaryGraphNode.java</file>
         </group>
     </open-files>
 </project-private>
